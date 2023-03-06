@@ -1,0 +1,9 @@
+resume.txt
+etudiant:
+    name
+    email
+    password
+livre :
+    name
+    auteur
+    edition
