@@ -21,4 +21,10 @@ Route::get("etudiant", 'App\Http\Controllers\Api\EtudiantController@listEtudiant
 Route::get("etudiant/{id}", 'App\Http\Controllers\Api\EtudiantController@getEtudiant'::class,"getEtudiant");   
 Route::post("creer", 'App\Http\Controllers\Api\EtudiantController@create'::class,"create");  
 Route::put("update/{id}", 'App\Http\Controllers\Api\EtudiantController@update'::class,"update");  
-Route::delete("delete/{id}", 'App\Http\Controllers\Api\EtudiantController@delete'::class,"delete");  
+Route::delete("delete/{id}", 'App\Http\Controllers\Api\EtudiantController@delete'::class,"delete");
+// routes du livre
+Route::get("livre", 'App\Http\Controllers\Api\LivreController@listLivre'::class,"listLivre");
+Route::get("livre/{id}", 'App\Http\Controllers\Api\LivreController@getLivre'::class,"getLivre");   
+Route::post("creer", 'App\Http\Controllers\Api\LivreController@create'::class,"create");  
+Route::put("update/{id}", 'App\Http\Controllers\Api\LivreController@update'::class,"update");  
+Route::delete("delete/{id}", 'App\Http\Controllers\Api\LivreController@delete'::class,"delete");  

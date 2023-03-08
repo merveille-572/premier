@@ -9,13 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function integer($column, $autoIncrement = false, $unsigned = false)
+    public function up()
     {
         Schema::create('livre', function (Blueprint $table) {
-            $table->id()->unsigned();
+            $table->id();
             $table->string('name');
             $table->string('auteur');
-            $table->string('edition ');
+            $table->string('edition');
             $table->timestamps();
         });
     }
@@ -23,9 +23,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('livre');
     }
 };
-?>
